@@ -46,9 +46,10 @@
         }
     </script>
 <link href="style.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
-<!-- TopNavBar (Shared Component) -->
+<!-- TopNavBar (Shared Component) 
 <nav class="bg-[#0B1D3A] border-b border-[#2A3F63] text-primary dark:text-primary docked full-width top-0 z-50 border-b border-[#2A3F63] sticky">
 <div class="flex justify-between items-center w-full px-6 py-4 max-w-none">
 <div class="flex items-center gap-8">
@@ -66,6 +67,43 @@
 <button class="glow-btn material-symbols-outlined hover:bg-white/10 transition-all duration-100 p-2 Active: scale-95 brightness-125" onclick="window.location.href='cart2.html'">shopping_cart</button>
 </div>
 </div>
+</nav>-->
+<nav class="fixed top-0 w-full bg-[#0B1D3A] border-b border-[#2A3F63] z-50">
+
+  <div class="flex justify-between items-center px-6 py-4">
+
+    <!-- Logo -->
+    <h1 class="text-[#F5E6C8] font-bold text-lg">THREADNOVA</h1>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-8 text-[#CBBFA3]">
+      <a class="text-primary font-black border-b-2 border-white pb-1 font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="index.html">HOME</a>
+      <a class="text-gray-400 font-medium hover:text-primary transition-colors font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="shop.html">SHOP</a>
+      <a class="text-gray-400 font-medium hover:text-primary transition-colors font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="new-drop.html">NEW DROP</a>
+      <a class="text-gray-400 font-medium hover:text-primary transition-colors font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="review.html">REVIEW</a>
+
+    </div>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="md:hidden text-[#F5E6C8] text-2xl">
+      ☰
+    </button>
+    <div class="flex items-center gap-6">
+    <button class="glow-btn material-symbols-outlined hover:bg-white/10 transition-all duration-100 p-2 Active: scale-95 brightness-125">search</button>
+    <button class="glow-btn material-symbols-outlined hover:bg-white/10 transition-all duration-100 p-2 Active: scale-95 brightness-125" onclick="window.location.href='cart2.html'">shopping_cart</button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden flex-col bg-[#142A4A] text-[#F5E6C8] px-6 py-4 space-y-4 md:hidden">
+    <a class="text-primary font-black border-b-2 border-white pb-1 font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="index.html">HOME</a>
+    <a class="text-gray-400 font-medium hover:text-primary transition-colors font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="shop.html">SHOP</a>
+    <a class="text-gray-400 font-medium hover:text-primary transition-colors font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="new-drop.html">NEW DROP</a>
+    <a class="text-gray-400 font-medium hover:text-primary transition-colors font-['Inter'] uppercase tracking-[-0.05em] text-[0.875rem] leading-[1.6]" href="review.html">REVIEW</a>
+
+  </div>
+  <script src="all.js"></script>
 </nav>
 <!-- SideNavBar (Mobile/Contextual) - Hidden by default on Desktop as per design system pivot -->
 <aside class="fixed left-0 top-0 h-full flex flex-col z-40 bg-[#131313] dark:bg-[#131313] w-64 hidden lg:hidden">
@@ -195,10 +233,60 @@
 <h2 class="text-4xl md:text-6xl font-black uppercase tracking-[-0.05em] mb-4">WORN BY THE REAL ONES</h2>
 <p class="text-[0.6875rem] font-bold uppercase tracking-[0.4em] text-on-surface-variant">COMMUNITY ARCHIVE</p>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-0">
-<!--<div class="aspect-square bg-surface-container overflow-hidden">
-<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="instagram post of a cool young person wearing a threadnova tee in a subway station" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqjdnHgB3S42YBTmru0G0Q5pMu2R5iZZjYPv8cqu80ZeaYayLBuO9Zz3xIjF4xqKuZSEhoiyol544HoKWC65KIaX5dbcqXocxIgHMWmEk_1odK5dYQE94jIDwfVPVWVsCBg3pFdCjk3RL8yKs9NVnx4Le_Ezk7aw7bZoiVjjss5j3NdhHb2UbXGTKe8iD0p7kOWNQjUmSnrxLR7kbe34plJR8kcUa2mU0d-DB7EZSZEd3SdQBVnr_jmb5MicldwTX0vBVJozREP4g"/>
-</div>-->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-4">
+
+  <!-- TILE -->
+  <div class="relative aspect-square overflow-hidden group">
+
+    <video 
+      src="assets/v1.mp4"
+      class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+      autoplay loop muted playsinline
+    ></video>
+
+    <div class="absolute inset-0 bg-[#0B1D3A]/30 group-hover:bg-transparent transition"></div>
+
+  </div>
+  <div class="relative aspect-square overflow-hidden group">
+
+    <video 
+      src="assets/v2.mp4"
+      class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+      autoplay loop muted playsinline
+    ></video>
+
+    <div class="absolute inset-0 bg-[#0B1D3A]/30 group-hover:bg-transparent transition"></div>
+
+  </div>
+  <div class="relative aspect-square overflow-hidden group">
+
+    <video 
+      src="assets/v3.mp4"
+      class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+      autoplay loop muted playsinline
+    ></video>
+
+
+    <div class="absolute inset-0 bg-[#0B1D3A]/30 group-hover:bg-transparent transition"></div>
+ 
+
+  </div>
+  <div class="relative aspect-square overflow-hidden group">
+
+    <video 
+      src="assets/v5.mp4"
+      class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+      autoplay loop muted playsinline
+    ></video>
+
+
+    <div class="absolute inset-0 bg-[#0B1D3A]/30 group-hover:bg-transparent transition"></div>
+ 
+
+  </div>
+
+</div>
+<br><br>
 <div class="card">
   <div class="card2">
 
@@ -211,20 +299,25 @@
 
   </div>
 </div>
-<!-- Instagram Reel Embed -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-4">
+<!--<div class="aspect-square bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="instagram post of a cool young person wearing a threadnova tee in a subway station" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqjdnHgB3S42YBTmru0G0Q5pMu2R5iZZjYPv8cqu80ZeaYayLBuO9Zz3xIjF4xqKuZSEhoiyol544HoKWC65KIaX5dbcqXocxIgHMWmEk_1odK5dYQE94jIDwfVPVWVsCBg3pFdCjk3RL8yKs9NVnx4Le_Ezk7aw7bZoiVjjss5j3NdhHb2UbXGTKe8iD0p7kOWNQjUmSnrxLR7kbe34plJR8kcUa2mU0d-DB7EZSZEd3SdQBVnr_jmb5MicldwTX0vBVJozREP4g"/>
+</div>-->
+
+<!-- Instagram Reel Embed 
 <a href="https://www.instagram.com/reel/DN0X9vqZty8/" target="_blank" class="block group">
 
   <div class="relative aspect-square bg-surface-container-high overflow-hidden">
 
-    <!-- Video -->
+    
     <video  preload="none"
       class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
       src="assets/v1.mp4" autoplay loop muted playsinline ></video>
 
-    <!-- Dark Overlay -->
+    
     <div class="absolute inset-0 bg-[#0B1D3A]/30 group-hover:bg-transparent transition-all duration-500"></div>
 
-    <!-- Text Label -->
+    
     <div class="absolute bottom-4 left-4">
       <p class="text-[#F5E6C8] text-xs uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 transition-all duration-500">
         View Reel →
@@ -243,7 +336,7 @@
 <div class="aspect-square bg-surface-container overflow-hidden hidden lg:block">
 <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="high fashion streetwear model posing on a rooftop at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBQz01w5fH8eG01pCKYpvaPAM_1suZsXQo54zIQBZ0hDeYr8l2dzlog1RGHV2o4dAUJdpFaueQyhiHS7wgvjqr3UHeyHX2C9rA6gBFqhvry_xur9k1yqwcowqRVFZ7OdZTjFRejfWXYRimTCamqUVtYWp7l3L6xfr5m5patioCdzFffXtlioPrZARJz6NEjkfXqcv9xDSSrvpddXBSR_t-hUDiFQx06YBpX6gWBRTnqw4vQVlwNPOn2mLs8dCXvMc60GfCFcl8iF8"/>
 </div>
-</div>
+</div>-->
 <!--<div class="px-6 md:px-16 mt-20 grid grid-cols-1 md:grid-cols-3 gap-12">
 <div class="p-8 border border-outline-variant/20">
 <div class="flex gap-1 mb-4">
